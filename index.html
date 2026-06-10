@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Faiza! 🎉</title>
+  <style>
+    /* --- CSS STYLES --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #050b1f, #000);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 15px yellow;
+    }
+
+    /* Button */
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: gold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: orange;
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cake {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    /* Balloon Styles & Animation */
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      width: 40px;
+      height: 50px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      z-index: 10;
+      animation: floatUp linear infinite;
+    }
+
+    /* Simple knot for the balloon */
+    .balloon::after {
+      content: "▲";
+      font-size: 8px;
+      color: inherit;
+      position: absolute;
+      bottom: -5px;
+      left: 16px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      95% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>🎉 Happy Birthday to you my Faiza 🎉</h1>
+    <p id="typeText"></p>
+    <button onclick="showCake()">🎂 Click Here for Surprise</button>
+  </div>
+
+  <div id="cakeSection" class="section hidden">
+    <h2>🎂 Surprise Cake</h2>
+    <div class="cake">🎂✨🎂</div>
+    <p>May Allah bless you with success, health & happiness 💙</p>
+  </div>
+
+  <div class="section">
+    <h2>💌 Message</h2>
+    <p>
+      Happy birthday, Faiza. I’m grateful for every moment we share as besties💞
+      <br><br>
+      We started as strangers and became friends, then besties, and found a constant reminder that good vibes and real talk go hand in hand 💞.
+    </p>
+  </div>
+
+  <script>
+    // Typing effect
+    const text = "You are the strongest person I know ❤️ Stay blessed always!";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typeText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    
+    // Start typing effect when page loads
+    window.onload = function() {
+      typeWriter();
+    };
+
+    // Cake show and smooth scroll
+    function showCake() {
+      const cakeSection = document.getElementById("cakeSection");
+      cakeSection.classList.remove("hidden");
+      
+      // Smooth scroll to the cake section
+      setTimeout(() => {
+        cakeSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+
+    // 🎈 LEFT & RIGHT BALLOONS GENERATOR
+    const colors = ["#ff4757", "#2ed573", "#eccc68", "#1e90ff", "#ff6b81", "#ffa502", "#a29bfe"];
+
+    for (let i = 0; i < 15; i++) {
+      let b = document.createElement("div");
+      b.className = "balloon";
+
+      // Decide left or right side placement
+      let side = Math.random() < 0.5 ? "left" : "right";
+      
+      // Randomly stagger the positions on the sides so they don't overlap completely
+      b.style[side] = Math.random() * 80 + "px"; 
+      
+      // Randomize start height (delay) so they don't fly up all at once
+      b.style.animationDelay = (Math.random() * 6) + "s";
+
+      // Color and speed
+      const chosenColor = colors[Math.floor(Math.random() * colors.length)];
+      b.style.background = chosenColor;
+      b.style.color = chosenColor; // Used for the CSS pseudo-element triangle color
+      b.style.animationDuration = (6 + Math.random() * 6) + "s";
+
+      // Append the balloon to the page body
+      document.body.appendChild(b);
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Faiza! 🎉</title>
+  <style>
+    /* --- CSS STYLES --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #050b1f, #000);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 15px yellow;
+    }
+
+    /* Button */
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: gold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: orange;
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cake {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    /* Balloon Styles & Animation */
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      width: 40px;
+      height: 50px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      z-index: 10;
+      animation: floatUp linear infinite;
+    }
+
+    /* Simple knot for the balloon */
+    .balloon::after {
+      content: "▲";
+      font-size: 8px;
+      color: inherit;
+      position: absolute;
+      bottom: -5px;
+      left: 16px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      95% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>🎉 Happy Birthday to you my Faiza 🎉</h1>
+    <p id="typeText"></p>
+    <button onclick="showCake()">🎂 Click Here for Surprise</button>
+  </div>
+
+  <div id="cakeSection" class="section hidden">
+    <h2>🎂 Surprise Cake</h2>
+    <div class="cake">🎂✨🎂</div>
+    <p>May Allah bless you with success, health & happiness 💙</p>
+  </div>
+
+  <div class="section">
+    <h2>💌 Message</h2>
+    <p>
+      Happy birthday, Faiza. I’m grateful for every moment we share as besties💞
+      <br><br>
+      We started as strangers and became friends, then besties, and found a constant reminder that good vibes and real talk go hand in hand 💞.
+    </p>
+  </div>
+
+  <script>
+    // Typing effect
+    const text = "You are the strongest person I know ❤️ Stay blessed always!";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typeText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    
+    // Start typing effect when page loads
+    window.onload = function() {
+      typeWriter();
+    };
+
+    // Cake show and smooth scroll
+    function showCake() {
+      const cakeSection = document.getElementById("cakeSection");
+      cakeSection.classList.remove("hidden");
+      
+      // Smooth scroll to the cake section
+      setTimeout(() => {
+        cakeSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+
+    // 🎈 LEFT & RIGHT BALLOONS GENERATOR
+    const colors = ["#ff4757", "#2ed573", "#eccc68", "#1e90ff", "#ff6b81", "#ffa502", "#a29bfe"];
+
+    for (let i = 0; i < 15; i++) {
+      let b = document.createElement("div");
+      b.className = "balloon";
+
+      // Decide left or right side placement
+      let side = Math.random() < 0.5 ? "left" : "right";
+      
+      // Randomly stagger the positions on the sides so they don't overlap completely
+      b.style[side] = Math.random() * 80 + "px"; 
+      
+      // Randomize start height (delay) so they don't fly up all at once
+      b.style.animationDelay = (Math.random() * 6) + "s";
+
+      // Color and speed
+      const chosenColor = colors[Math.floor(Math.random() * colors.length)];
+      b.style.background = chosenColor;
+      b.style.color = chosenColor; // Used for the CSS pseudo-element triangle color
+      b.style.animationDuration = (6 + Math.random() * 6) + "s";
+
+      // Append the balloon to the page body
+      document.body.appendChild(b);
+    }
+  </script>
+
+</body>
+</html>
